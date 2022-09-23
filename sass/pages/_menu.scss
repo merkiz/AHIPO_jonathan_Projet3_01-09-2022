@@ -1,0 +1,71 @@
+.container-img {
+
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    background-color: $background-general;
+
+
+    .menu-title {
+
+        h2 {
+            font-family: 'Shrikhand', sans-serif;
+        }
+
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 40px 40px 0 0;
+        background-color: $background-general;
+        margin-top: -40px;
+
+        @include heart;
+
+    }
+
+    .menu-list {
+
+        @include alignCenter;
+        flex-direction: column;
+        gap: 24px;
+
+        .menu-card {
+
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #b8b5b5;
+            background-color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+
+            .menu-details {
+
+
+                display: flex;
+
+                flex-direction: column;
+
+                h3 {
+                    margin: 5px 5px;
+                }
+
+                p {
+                    margin: 5px 5px;
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+}

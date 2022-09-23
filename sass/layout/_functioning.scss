@@ -1,0 +1,74 @@
+.functioning {
+
+
+
+    h2 {
+        margin-left: 20px;
+
+    }
+
+    .functioning-list {
+
+        width: 40%;
+        margin-left: 23px;
+        width: 90%;
+
+
+
+        .functioning-card {
+            @include alignCenter;
+            box-shadow: 0 0 10px #b8b5b5;
+            background-color: #f6f6f6;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 18px;
+            height: 70px;
+            font-size: 16px;
+            font-weight: 900;
+            width: 40%;
+            margin-top: 30px;
+            justify-content: space-evenly;
+            position: relative;
+            left: 33%;
+
+            @media screen and (max-width: 762px) {
+
+                width: 100%;
+                left: 0%;
+            }
+
+            &:hover {
+                background-color: #f2eafb;
+
+                i {
+                    color: $primary;
+                }
+            }
+
+            .functioning-number {
+
+                @include alignCenter;
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                background-color: $primary;
+                color: #fff;
+                position: absolute;
+                left: -15px;
+            }
+
+            p {
+                margin-right: 80px;
+            }
+
+            i {
+                color: gray;
+
+            }
+
+
+        }
+
+    }
+}

@@ -1,0 +1,325 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+body h1 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.explorer p {
+  font-size: 18px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header img {
+  width: 170px;
+  padding: 5px 0px;
+}
+
+footer {
+  background: #353535;
+  color: white;
+}
+footer h4 {
+  padding: 18px 0px 15px 23px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+footer ul {
+  padding-left: 25px;
+  padding-bottom: 16px;
+  list-style: none;
+  margin: 0;
+}
+footer ul li {
+  margin-bottom: 5px;
+}
+footer ul i {
+  margin-right: 10px;
+}
+footer ul a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+
+.functioning h2 {
+  margin-left: 20px;
+}
+.functioning .functioning-list {
+  width: 40%;
+  margin-left: 23px;
+  width: 90%;
+}
+.functioning .functioning-list .functioning-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #b8b5b5;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 18px;
+  height: 70px;
+  font-size: 16px;
+  font-weight: 900;
+  width: 40%;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  position: relative;
+  left: 33%;
+}
+@media screen and (max-width: 762px) {
+  .functioning .functioning-list .functioning-card {
+    width: 100%;
+    left: 0%;
+  }
+}
+.functioning .functioning-list .functioning-card:hover {
+  background-color: #f2eafb;
+}
+.functioning .functioning-list .functioning-card:hover i {
+  color: #9356DC;
+}
+.functioning .functioning-list .functioning-card .functioning-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+  position: absolute;
+  left: -15px;
+}
+.functioning .functioning-list .functioning-card p {
+  margin-right: 80px;
+}
+.functioning .functioning-list .functioning-card i {
+  color: gray;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  margin-top: 70px;
+}
+.restaurant h2 {
+  margin-left: 25px;
+  padding-top: 40px;
+  margin-bottom: 18px;
+}
+.restaurant .restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.restaurant .restaurant-list .restaurant-card {
+  box-shadow: 5px 5px 15px #c7c7c7;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 40%;
+  border-radius: 18px;
+  margin-bottom: 35px;
+  position: relative;
+}
+@media screen and (max-width: 762px) {
+  .restaurant .restaurant-list .restaurant-card {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+.restaurant .restaurant-list .restaurant-card img {
+  width: 100%;
+  height: 306px;
+  object-fit: cover;
+  object-position: 50% 61%;
+  border-radius: 18px 18px 0 0;
+  position: relative;
+}
+@media screen and (max-width: 762px) {
+  .restaurant .restaurant-list .restaurant-card img {
+    height: 173px;
+  }
+}
+.restaurant .restaurant-list .restaurant-card .new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 20px;
+  height: 30px;
+  width: 80px;
+  border-radius: 3px;
+  background-color: #99E2D0;
+  color: #1b9779;
+  font-size: 14px;
+  font-weight: 500;
+  top: 0;
+  right: 8px;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description .restaurant-info {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description .restaurant-info h3 {
+  margin: 8px 0 5px 15px;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description .restaurant-info p {
+  margin: 0px 0px 17px 12px;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description .fa-heart {
+  position: absolute;
+  font-size: 30px;
+  right: 20px;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description .fa-solid {
+  opacity: 0;
+  color: transparent;
+  transition: all 300ms ease-in-out;
+}
+.restaurant .restaurant-list .restaurant-card .restaurant-description .fa-solid:hover {
+  opacity: 1;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(200deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-fill-color: transparent;
+  animation: fill 500ms ease-in forwards;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  box-shadow: inset 0px 8px 12px -15px black;
+  height: 46px;
+  padding-left: 30px;
+}
+form input {
+  background-color: #eeeeee;
+  font-size: 15px;
+  border: transparent;
+}
+form i {
+  margin-right: 15px;
+}
+
+.explorer-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding-bottom: 36px;
+  text-align: center;
+}
+
+.button {
+  background: #fff;
+  background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 30px;
+  border: 0;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0px 5px 5px #c1c1c1;
+  transition: all 300ms ease-in-out;
+}
+.button:hover {
+  transform: scale(1.035);
+  filter: brightness(1.1);
+  box-shadow: 0px 12px 6px 1px #c1c1c1;
+}
+
+.container-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.menu {
+  background-color: #f6f6f6;
+}
+.menu .menu-title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+  margin-top: -40px;
+}
+.menu .menu-title h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+.menu .menu-title .fa-heart {
+  position: absolute;
+  font-size: 30px;
+  right: 20px;
+}
+.menu .menu-title .fa-solid {
+  opacity: 0;
+  color: transparent;
+  transition: all 300ms ease-in-out;
+}
+.menu .menu-title .fa-solid:hover {
+  opacity: 1;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(200deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-fill-color: transparent;
+  animation: fill 500ms ease-in forwards;
+}
+.menu .menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.menu .menu-list .menu-card {
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #b8b5b5;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .menu-list .menu-card .menu-details {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-list .menu-card .menu-details h3 {
+  margin: 5px 5px;
+}
+.menu .menu-list .menu-card .menu-details p {
+  margin: 5px 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

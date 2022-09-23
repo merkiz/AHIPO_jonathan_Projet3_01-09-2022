@@ -1,0 +1,34 @@
+form {
+
+    @include alignCenter;
+    background-color: darken($background-general, 3%);
+
+    box-shadow: inset 0px 8px 12px -15px black;
+    height: 46px;
+    padding-left: 30px;
+
+    input {
+        background-color: darken($background-general, 3%);
+
+        font-size: 15px;
+        border: transparent;
+    }
+
+    i {
+        margin-right: 15px;
+
+    }
+}
+
+
+.explorer-description {
+
+    @include alignCenter;
+    flex-direction: column;
+    background-color: $background-general;
+    padding-bottom: 36px;
+    text-align: center;
+
+
+
+}
