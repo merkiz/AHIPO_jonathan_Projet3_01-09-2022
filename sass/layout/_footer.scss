@@ -1,7 +1,8 @@
 footer {
     background: #353535;
     color: white;
-
+    display: flex;
+    flex-direction: column;
     h4 {
         padding: 18px 0px 15px 23px;
         font-family: 'Shrikhand', sans-serif;

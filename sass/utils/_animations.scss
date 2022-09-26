@@ -1,0 +1,40 @@
+@keyframes rotating{
+    from {
+      
+      transform: rotate(-270deg);
+    }
+    to {
+      
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes card-appear {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+
+  @keyframes loading{
+    0%{
+      transform: scale(1);
+      opacity: 1;
+    }
+    100%{
+      transform: scale(0);
+      opacity: 0;
+    }
+
+  }
+
+  @keyframes spin{
+   to {
+    transform: rotate(360deg);
+   }
+  }

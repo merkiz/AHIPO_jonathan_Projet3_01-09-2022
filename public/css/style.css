@@ -15,19 +15,62 @@ body h1 {
   font-size: 18px;
 }
 
+@keyframes rotating {
+  from {
+    transform: rotate(-270deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes card-appear {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 header img {
   width: 170px;
   padding: 5px 0px;
 }
+header i {
+  position: absolute;
+  left: 3%;
+  color: black;
+  font-size: 20px;
+  bottom: 20%;
+}
 
 footer {
   background: #353535;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 footer h4 {
   padding: 18px 0px 15px 23px;
@@ -191,7 +234,7 @@ footer ul a {
 }
 .restaurant .restaurant-list .restaurant-card .restaurant-description .fa-heart {
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
   right: 20px;
 }
 .restaurant .restaurant-list .restaurant-card .restaurant-description .fa-solid {
@@ -237,16 +280,38 @@ form i {
   text-align: center;
 }
 
+.loader {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: loading 200ms 3s forwards;
+}
+.loader::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #9356DC;
+  animation: spin 1s infinite linear;
+}
+
 .button {
-  background: #fff;
+  background: white;
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   border-radius: 30px;
   border: 0;
   padding: 15px 20px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   cursor: pointer;
-  color: #fff;
+  text-align: center;
+  color: white;
   box-shadow: 0px 5px 5px #c1c1c1;
   transition: all 300ms ease-in-out;
 }
@@ -264,6 +329,9 @@ form i {
 
 .menu {
   background-color: #f6f6f6;
+  padding-bottom: 15%;
+  display: flex;
+  flex-direction: column;
 }
 .menu .menu-title {
   display: flex;
@@ -273,12 +341,9 @@ form i {
   background-color: #f6f6f6;
   margin-top: -40px;
 }
-.menu .menu-title h2 {
-  font-family: "Shrikhand", sans-serif;
-}
 .menu .menu-title .fa-heart {
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
   right: 20px;
 }
 .menu .menu-title .fa-solid {
@@ -295,31 +360,149 @@ form i {
   -webkit-text-fill-color: transparent;
   animation: fill 500ms ease-in forwards;
 }
+.menu .menu-title h2 {
+  font-family: "Shrikhand", sans-serif;
+  margin-left: 16px;
+  margin-top: 34px;
+}
+.menu .menu-title i {
+  top: 36px;
+  margin-right: 15px;
+}
 .menu .menu-list {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 24px;
+  margin-bottom: 46px;
+}
+.menu .menu-list h3 {
+  margin-left: 20px;
+  margin-bottom: 0;
+  font-weight: 100;
+}
+.menu .menu-list h3::after {
+  content: "";
+  background-color: #99E2D0;
+  width: 50px;
+  height: 3px;
+  display: flex;
+  margin-top: 5px;
+}
+@media screen and (min-width: 762px) {
+  .menu .menu-list {
+    display: grid;
+    margin-bottom: 46px;
+    grid-template-columns: 0fr 1fr 1fr 1fr;
+    align-items: end;
+  }
 }
 .menu .menu-list .menu-card {
-  width: 80%;
+  margin: 20px 20px 0px 16px;
+  display: flex;
+  width: 91%;
   border-radius: 15px;
   box-shadow: 0 0 10px #b8b5b5;
-  background-color: #ffffff;
+  background-color: white;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
+  animation: card-appear 1s both;
+}
+.menu .menu-list .menu-card:nth-child(1) {
+  animation-delay: 300ms;
+}
+.menu .menu-list .menu-card:nth-child(2) {
+  animation-delay: 600ms;
+}
+.menu .menu-list .menu-card:nth-child(3) {
+  animation-delay: 900ms;
+}
+.menu .menu-list .menu-card:nth-child(4) {
+  animation-delay: 1200ms;
+}
+.menu .menu-list .menu-card:nth-child(5) {
+  animation-delay: 1500ms;
+}
+.menu .menu-list .menu-card:nth-child(6) {
+  animation-delay: 1800ms;
+}
+.menu .menu-list .menu-card:nth-child(7) {
+  animation-delay: 2100ms;
+}
+.menu .menu-list .menu-card:nth-child(8) {
+  animation-delay: 2400ms;
+}
+.menu .menu-list .menu-card:nth-child(9) {
+  animation-delay: 2700ms;
+}
+.menu .menu-list .menu-card:nth-child(10) {
+  animation-delay: 3000ms;
+}
+.menu .menu-list .menu-card:nth-child(11) {
+  animation-delay: 3300ms;
+}
+.menu .menu-list .menu-card:nth-child(12) {
+  animation-delay: 3600ms;
 }
 .menu .menu-list .menu-card .menu-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
-.menu .menu-list .menu-card .menu-details h3 {
-  margin: 5px 5px;
+.menu .menu-list .menu-card .menu-details h4 {
+  margin: 7px 5px 2px 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .menu-list .menu-card .menu-details p {
-  margin: 5px 5px;
+  margin: 4px 0px 7px 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .menu-list .menu-card .price {
+  display: flex;
+  margin-left: auto;
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 7px;
+  align-self: flex-end;
+}
+.menu .menu-list .menu-card .menu-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  width: 60px;
+  margin-right: -60px;
+  transition: margin-right 0.5s;
+}
+.menu .menu-list .menu-card i {
+  font-size: 13px;
+  color: #99E2D0;
+  background: white;
+  padding: 4px;
+  border-radius: 100%;
+}
+.menu .menu-list .menu-card:hover .menu-select {
+  margin-right: 0;
+}
+.menu .menu-list .menu-card:hover i {
+  animation: rotating 400ms linear forwards;
+}
+@media screen and (min-width: 762px) {
+  .menu .menu-list .menu-card {
+    width: 90%;
+  }
+}
+.menu .button {
+  align-self: center;
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

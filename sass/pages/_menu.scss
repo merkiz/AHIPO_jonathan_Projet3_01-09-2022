@@ -10,13 +10,12 @@
 
 .menu {
     background-color: $background-general;
-
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: column;
 
     .menu-title {
 
-        h2 {
-            font-family: 'Shrikhand', sans-serif;
-        }
 
         display: flex;
         align-items: center;
@@ -24,48 +23,165 @@
         border-radius: 40px 40px 0 0;
         background-color: $background-general;
         margin-top: -40px;
-
         @include heart;
+
+        
+        h2 {
+            font-family: 'Shrikhand', sans-serif;
+            margin-left: 16px;
+            margin-top: 34px;
+            
+        }
+        i{
+            top: 36px;
+            margin-right: 15px;
+        }
 
     }
 
     .menu-list {
 
-        @include alignCenter;
-        flex-direction: column;
-        gap: 24px;
+        width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 46px;
+        
+        h3{
+            margin-left: 20px;
+            margin-bottom: 0;
+            font-weight: 100;
+
+            &::after{
+                content: "";
+                background-color: $tertiary;
+                width: 50px;
+                height: 3px;
+                display: flex;
+                margin-top: 5px;
+
+                
+            }
+            
+            }
+            @media screen and (min-width: 762px){
+                    
+            display: grid;
+            margin-bottom: 46px;
+             grid-template-columns: 0fr 1fr 1fr 1fr;
+            align-items: end;
+                                            
+        }
+       
 
         .menu-card {
 
-            width: 80%;
-            border-radius: 15px;
-            box-shadow: 0 0 10px #b8b5b5;
-            background-color: #ffffff;
-            cursor: pointer;
+            margin:20px 20px 0px 16px;
+             
+        
             display: flex;
-            justify-content: space-between;
-
+            width: 91%;
+            border-radius: 15px;
+            
+            box-shadow: 0 0 10px #b8b5b5;
+            background-color: white;
+            cursor: pointer;
+            overflow: hidden;
+            animation: card-appear 1s both;
+            @for $i from 1 through  12 {
+                &:nth-child(#{$i}){
+                    animation-delay:300ms * $i
+                }
+                
+                
+            }
+            
             .menu-details {
 
-
                 display: flex;
-
                 flex-direction: column;
+                justify-content: center;
+                overflow: hidden;
 
-                h3 {
-                    margin: 5px 5px;
+                h4 {
+                    margin: 7px 5px 2px 8px;
+                    white-space: nowrap; 
+                text-overflow: ellipsis;
+                overflow: hidden;
+                
                 }
 
                 p {
-                    margin: 5px 5px;
+                    margin: 4px 0px 7px 8px;
+                    white-space: nowrap; 
+                text-overflow: ellipsis;
+                overflow: hidden;
                 }
 
             }
 
+            .price{
+                display:flex;
+                margin-left: auto;
+                padding-right: 15px;
+               
+                font-weight: bold;
+                font-size: 14px;
+                margin-bottom: 7px;
+                align-self: flex-end
+            }
 
+            .menu-select{
+                @include alignCenter;
+                background: $tertiary;
+                border-radius: 0 15px 15px 0;
+                width:60px;
+                margin-right: -60px;
+                transition: margin-right 0.5s;
+            }
+
+            i {
+                font-size: 13px;
+                color: $tertiary;
+                background: white;
+                padding: 4px;
+                border-radius: 100%;
+                                      
+            }
+
+            &:hover {
+                .menu-select{
+                margin-right:0 ;
+                }
+                i{
+                    
+                    animation: rotating 400ms linear forwards;
+                }
+            }
+            
+            @media screen and (min-width: 762px){
+                width: 90%;
+                            
+            }
+            
+                       
+            
         }
-
-
+        
+        
+    }
+    .button{
+            
+        align-self: center;
+        display: flex;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
 }
+  
+
+
+
+    
+     
+    
