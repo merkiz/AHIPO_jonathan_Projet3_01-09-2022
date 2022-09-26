@@ -289,7 +289,7 @@ form i {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: loading 200ms 3s forwards;
+  animation: loading 200ms 1.5s forwards;
 }
 .loader::after {
   content: "";
@@ -393,7 +393,7 @@ form i {
     display: grid;
     margin-bottom: 46px;
     grid-template-columns: 0fr 1fr 1fr 1fr;
-    align-items: end;
+    align-items: center;
   }
 }
 .menu .menu-list .menu-card {
@@ -492,11 +492,6 @@ form i {
 }
 .menu .menu-list .menu-card:hover i {
   animation: rotating 400ms linear forwards;
-}
-@media screen and (min-width: 762px) {
-  .menu .menu-list .menu-card {
-    width: 90%;
-  }
 }
 .menu .button {
   align-self: center;

@@ -68,7 +68,7 @@
             display: grid;
             margin-bottom: 46px;
              grid-template-columns: 0fr 1fr 1fr 1fr;
-            align-items: end;
+            align-items: center;
                                             
         }
        
@@ -157,14 +157,7 @@
                     animation: rotating 400ms linear forwards;
                 }
             }
-            
-            @media screen and (min-width: 762px){
-                width: 90%;
-                            
-            }
-            
-                       
-            
+                                                                    
         }
         
         
