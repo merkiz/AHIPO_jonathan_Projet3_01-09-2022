@@ -100,11 +100,21 @@ footer ul a {
 
 .functioning h2 {
   margin-left: 20px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 762px) {
+  .functioning h2 {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-top: 13%;
+  }
 }
 .functioning .functioning-list {
-  width: 40%;
-  margin-left: 23px;
-  width: 90%;
+  margin-left: 14px;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
 }
 .functioning .functioning-list .functioning-card {
   display: flex;
@@ -124,12 +134,6 @@ footer ul a {
   justify-content: space-evenly;
   position: relative;
   left: 33%;
-}
-@media screen and (max-width: 762px) {
-  .functioning .functioning-list .functioning-card {
-    width: 100%;
-    left: 0%;
-  }
 }
 .functioning .functioning-list .functioning-card:hover {
   background-color: #f2eafb;
@@ -154,6 +158,20 @@ footer ul a {
 }
 .functioning .functioning-list .functioning-card i {
   color: gray;
+}
+@media screen and (min-width: 762px) {
+  .functioning .functioning-list .functioning-card {
+    width: 40%;
+    padding-right: 4%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .functioning .functioning-list .functioning-card {
+    width: 97%;
+    left: 0;
+    padding-right: 6%;
+    align-self: center;
+  }
 }
 
 .restaurant {
@@ -180,13 +198,6 @@ footer ul a {
   margin-bottom: 35px;
   position: relative;
 }
-@media screen and (max-width: 762px) {
-  .restaurant .restaurant-list .restaurant-card {
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 90%;
-  }
-}
 .restaurant .restaurant-list .restaurant-card img {
   width: 100%;
   height: 306px;
@@ -194,11 +205,6 @@ footer ul a {
   object-position: 50% 61%;
   border-radius: 18px 18px 0 0;
   position: relative;
-}
-@media screen and (max-width: 762px) {
-  .restaurant .restaurant-list .restaurant-card img {
-    height: 173px;
-  }
 }
 .restaurant .restaurant-list .restaurant-card .new {
   display: flex;
@@ -251,6 +257,27 @@ footer ul a {
   -webkit-text-fill-color: transparent;
   animation: fill 500ms ease-in forwards;
 }
+@media screen and (max-width: 762px) {
+  .restaurant .restaurant-list .restaurant-card {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+  }
+  .restaurant .restaurant-list .restaurant-card img {
+    height: 173px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .restaurant .restaurant-list .restaurant-card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .restaurant .restaurant-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 form {
   display: flex;
@@ -302,7 +329,6 @@ form i {
 }
 
 .button {
-  background: white;
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   border-radius: 30px;
   border: 0;
@@ -387,14 +413,6 @@ form i {
   height: 3px;
   display: flex;
   margin-top: 5px;
-}
-@media screen and (min-width: 762px) {
-  .menu .menu-list {
-    display: grid;
-    margin-bottom: 46px;
-    grid-template-columns: 0fr 1fr 1fr 1fr;
-    align-items: center;
-  }
 }
 .menu .menu-list .menu-card {
   margin: 20px 20px 0px 16px;
@@ -492,6 +510,19 @@ form i {
 }
 .menu .menu-list .menu-card:hover i {
   animation: rotating 400ms linear forwards;
+}
+@media screen and (min-width: 762px) {
+  .menu .menu-list {
+    display: grid;
+    margin-bottom: 46px;
+    grid-template-columns: 0fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  .menu .menu-list {
+    display: flex;
+  }
 }
 .menu .button {
   align-self: center;
