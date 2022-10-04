@@ -26,7 +26,7 @@
         @include heart;
 
         
-        h2 {
+        h1 {
             font-family: 'Shrikhand', sans-serif;
             margin-left: 16px;
             margin-top: 34px;
@@ -47,7 +47,7 @@
          margin-bottom: 46px;
 
                        
-        h3{
+        h2{
             margin-left: 20px;
             margin-bottom: 0;
             font-weight: 100;
@@ -95,7 +95,7 @@
                 justify-content: center;
                 overflow: hidden;
 
-                h4 {
+                h3 {
                     margin: 7px 5px 2px 8px;
                     white-space: nowrap; 
                 text-overflow: ellipsis;
@@ -155,9 +155,10 @@
 
         @media screen and (min-width: 762px){
                     
-            display: grid;
+            display:flex;
             margin-bottom: 46px;
-             grid-template-columns: 0fr 1fr 1fr 1fr;
+            width: 60%;
+            align-self: center;
             align-items: center;                                        
         }
 

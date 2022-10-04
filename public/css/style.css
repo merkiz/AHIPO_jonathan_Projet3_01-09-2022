@@ -198,6 +198,10 @@ footer ul a {
   margin-bottom: 35px;
   position: relative;
 }
+.restaurant .restaurant-list .restaurant-card a {
+  text-decoration: none;
+  color: black;
+}
 .restaurant .restaurant-list .restaurant-card img {
   width: 100%;
   height: 306px;
@@ -386,7 +390,7 @@ form i {
   -webkit-text-fill-color: transparent;
   animation: fill 500ms ease-in forwards;
 }
-.menu .menu-title h2 {
+.menu .menu-title h1 {
   font-family: "Shrikhand", sans-serif;
   margin-left: 16px;
   margin-top: 34px;
@@ -401,12 +405,12 @@ form i {
   flex-direction: column;
   margin-bottom: 46px;
 }
-.menu .menu-list h3 {
+.menu .menu-list h2 {
   margin-left: 20px;
   margin-bottom: 0;
   font-weight: 100;
 }
-.menu .menu-list h3::after {
+.menu .menu-list h2::after {
   content: "";
   background-color: #99E2D0;
   width: 50px;
@@ -467,7 +471,7 @@ form i {
   justify-content: center;
   overflow: hidden;
 }
-.menu .menu-list .menu-card .menu-details h4 {
+.menu .menu-list .menu-card .menu-details h3 {
   margin: 7px 5px 2px 8px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -513,9 +517,10 @@ form i {
 }
 @media screen and (min-width: 762px) {
   .menu .menu-list {
-    display: grid;
+    display: flex;
     margin-bottom: 46px;
-    grid-template-columns: 0fr 1fr 1fr 1fr;
+    width: 60%;
+    align-self: center;
     align-items: center;
   }
 }
